@@ -4,22 +4,22 @@
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <title>{{document.title}} | Doc Base</title>
-<!--        <link rel="stylesheet" href="{{{relativeUrl '/css/normalize.css' document.url}}}">
-        <link rel="stylesheet" href="{{{relativeUrl '/css/foundation.css' document.url}}}" -->
+<!--        <link rel="stylesheet" href="{{{getRelativeUrl '/css/normalize.css' document.url}}}">
+        <link rel="stylesheet" href="{{{getRelativeUrl '/css/foundation.css' document.url}}}" -->
 
         <!-- Need v 5.5.2 for accessible visibility class. -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css"/>
 
-        <link rel="stylesheet" href="{{{relativeUrl '/css/highlightjs-custom.css' document.url}}}">
-        <link rel="stylesheet" type="text/css" href="{{{relativeUrl '/lib/infusion/src/framework/preferences/css/Enactors.css' document.url}}}" />
-        <link rel="stylesheet" type="text/css" href="{{{relativeUrl '/lib/infusion/src/framework/preferences/css/PrefsEditor.css' document.url}}}" />
-        <link rel="stylesheet" type="text/css" href="{{{relativeUrl '/lib/infusion/src/framework/preferences/css/SeparatedPanelPrefsEditor.css' document.url}}}" />
-        <link rel="stylesheet" href="{{{relativeUrl '/css/doc-base.css' document.url}}}">
+        <link rel="stylesheet" href="{{{getRelativeUrl '/css/highlightjs-custom.css' document.url}}}">
+        <link rel="stylesheet" type="text/css" href="{{{getRelativeUrl '/lib/infusion/src/framework/preferences/css/Enactors.css' document.url}}}" />
+        <link rel="stylesheet" type="text/css" href="{{{getRelativeUrl '/lib/infusion/src/framework/preferences/css/PrefsEditor.css' document.url}}}" />
+        <link rel="stylesheet" type="text/css" href="{{{getRelativeUrl '/lib/infusion/src/framework/preferences/css/SeparatedPanelPrefsEditor.css' document.url}}}" />
+        <link rel="stylesheet" href="{{{getRelativeUrl '/css/doc-base.css' document.url}}}">
 
-        <link rel="icon" type="image/png" href="{{{relativeUrl '/images/favico.png' document.url}}}">
+        <link rel="icon" type="image/png" href="{{{getRelativeUrl '/images/favico.png' document.url}}}">
 
-        <script type="text/javascript" src="{{{relativeUrl '/lib/infusion/infusion-uio.js' document.url}}}"></script>
+        <script type="text/javascript" src="{{{getRelativeUrl '/lib/infusion/infusion-uio.js' document.url}}}"></script>
     </head>
     <body class="doc-base doc-base-hide-sidebare">
 
@@ -49,16 +49,16 @@
 
             <header class="row doc-base-header doc-base-header">
                 <div class="doc-base-logo small-12 medium-5 column">
-                    <a class="doc-base-logoText" href="{{{relativeUrl '/index.html' document.url}}}" title="Doc Base">Doc Base</a>
+                    <a class="doc-base-logoText" href="{{{getRelativeUrl '/index.html' document.url}}}" title="Doc Base">Doc Base</a>
                 </div>
 
                 <nav class="small-12 medium-7 column">
                     {{! Highlight the (active) category the document belongs to. }}
                     {{#each siteStructure}}
                         {{#ifEqual category ../document.category}}
-                            <a href="{{{relativeUrl categoryHref ../../document.url}}}" title="{{category}}" class="doc-base-category-active">{{category}}</a>
+                            <a href="{{{getRelativeUrl categoryHref ../../document.url}}}" title="{{category}}" class="doc-base-category-active">{{category}}</a>
                         {{else}}
-                            <a href="{{{relativeUrl categoryHref ../../document.url}}}" title="{{category}}">{{category}}</a>
+                            <a href="{{{getRelativeUrl categoryHref ../../document.url}}}" title="{{category}}">{{category}}</a>
                         {{/ifEqual}}
                     {{/each}}
                 </nav>
@@ -79,7 +79,7 @@
                                                 {{#ifEqual href ../../../../document.url}}
                                                     <span class="doc-base-TOC-item doc-base-TOC-active">{{pageName}}</span>
                                                 {{else}}
-                                                    <a href="{{relativeUrl href ../../../../../document.url}}"><span class="doc-base-TOC-item">{{pageName}}</span></a>
+                                                    <a href="{{getRelativeUrl href ../../../../../document.url}}"><span class="doc-base-TOC-item">{{pageName}}</span></a>
                                                 {{/ifEqual}}
                                             </li>
                                         {{/each}}
@@ -100,7 +100,7 @@
 
                     <h1>{{document.title}}</h1>
 
-                    <p class="doc-base-githubLink"><a href="{{githubLocation}}" target="_blank">Edit on GitHub</a></p>
+                    <p class="doc-base-githubLink"><a href="{{getGithubLocation}}" target="_blank">Edit on GitHub</a></p>
 
                     <div class="doc-base-articleContent">
                         {{{rewriteMdLinks content}}}
@@ -117,9 +117,9 @@
 
             <script type="text/javascript">
                 fluid.uiOptions.prefsEditor(".flc-prefsEditor-separatedPanel", {
-                    "templatePrefix": "{{{relativeUrl '/lib/infusion/src/framework/preferences/html/' document.url}}}",
-                    "messagePrefix": "{{{relativeUrl '/lib/infusion/src/framework/preferences/messages/' document.url}}}",
-                    "tocTemplate": "{{{relativeUrl '/lib/infusion/src/components/tableOfContents/html/TableOfContents.html' document.url}}}"
+                    "templatePrefix": "{{{getRelativeUrl '/lib/infusion/src/framework/preferences/html/' document.url}}}",
+                    "messagePrefix": "{{{getRelativeUrl '/lib/infusion/src/framework/preferences/messages/' document.url}}}",
+                    "tocTemplate": "{{{getRelativeUrl '/lib/infusion/src/components/tableOfContents/html/TableOfContents.html' document.url}}}"
                 });
             </script>
         </div> <!-- end container -->
