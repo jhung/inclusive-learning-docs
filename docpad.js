@@ -43,10 +43,10 @@ module.exports = {
     plugins: {
         handlebars: {
             helpers: {
-                rewriteMdLinks: docBase.rewriteMdLinks,
-                getGithubLocation: docBase.makeGithubLocationHelper(githubDocRoot),
-                getRelativeUrl: docBase.getRelativeUrl,
-                ifEqual: docBase.ifEqual
+                rewriteMdLinks: docBase.helpers.rewriteMdLinks,
+                getGithubLocation: docBase.helpers.makeGithubLocationHelper(githubDocRoot),
+                getRelativeUrl: docBase.helpers.getRelativeUrl,
+                ifEqual: docBase.helpers.ifEqual
             }
         },
         highlightjs: {
