@@ -30,6 +30,10 @@ toc-item-hover-background ?= #efefef;
 toc-item-hover-border ?= 0.2rem solid #000;
 toc-border-color ?= #cfcfcf;
 
+/* Table of Contents Hide-Show ribbon */
+hideShow-background ?= #efefef;
+hideShow-color ?= link-color;
+
 /* Article Body area */
 doc-articleBody ?= #fff;
 
@@ -319,9 +323,9 @@ Delete - does not seem to be used?
 }
 
 .doc-base-start-TOC-hideShow:after {
-    border-bottom: 2.3rem solid toc-background;
+    border-bottom: 2.3rem solid hideShow-background;
     border-right: 2.1rem solid doc-content-background;
-    border-top: 2.2rem solid toc-background;
+    border-top: 2.2rem solid hideShow-background;
     content: "";
     position:absolute;
     right:0;
@@ -330,6 +334,7 @@ Delete - does not seem to be used?
 }
 
 .doc-base-start-TOC-hideShow a {
+    color: hideShow-color;
     margin-right: 0rem;
     margin-top: 0rem;
     background: toc-background;
