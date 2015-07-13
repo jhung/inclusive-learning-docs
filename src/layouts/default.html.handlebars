@@ -20,8 +20,9 @@
         <link rel="icon" type="image/png" href="{{{getRelativeUrl '/images/favico.png' document.url}}}">
 
         <script type="text/javascript" src="{{{getRelativeUrl '/lib/infusion/infusion-uio.js' document.url}}}"></script>
+        <script type="text/javascript" src="{{{getRelativeUrl '/js/DocBase.js' document.url}}}"></script>
     </head>
-    <body class="doc-base doc-base-hide-sidebare">
+    <body class="doc-base doc-base-sidebar-visibility">
 
         <div class="container doc-base-container">
 
@@ -65,8 +66,8 @@
             </header>
 
             <div class="row doc-base-mainBody">
-                <div class="doc-base-TOC-container small-8 medium-4 end column">
-                    <nav id="tableOfContents" class="row doc-base-TOC" tabindex="-1">
+                <div class="doc-base-TOC-container small-8 medium-3 column">
+                    <nav id="tableOfContents" class="doc-base-TOC" tabindex="-1">
                         {{#each siteStructure}}
                             {{! Output only the table of contents matching the current document's category }}
                             {{#ifEqual category ../document.category}}
@@ -89,8 +90,8 @@
                         {{/each}}
                     </nav>
                 </div>
-                <div class="small-4 column doc-base-TOC-hideShow">
-                    <a href="#" aria-label="Hide or Show List of Articles">Topics</a>
+                <div class="small-4 medium-1 column doc-base-TOC-hideShow">
+                    <a href="#" class="doc-basec-topics" aria-label="Hide or Show List of Articles">Topics</a>
                 </div>
 
 
@@ -116,11 +117,7 @@
             </footer>
 
             <script type="text/javascript">
-                fluid.uiOptions.prefsEditor(".flc-prefsEditor-separatedPanel", {
-                    "templatePrefix": "{{{getRelativeUrl '/lib/infusion/src/framework/preferences/html/' document.url}}}",
-                    "messagePrefix": "{{{getRelativeUrl '/lib/infusion/src/framework/preferences/messages/' document.url}}}",
-                    "tocTemplate": "{{{getRelativeUrl '/lib/infusion/src/components/tableOfContents/html/TableOfContents.html' document.url}}}"
-                });
+                docBase.init("{{{getRelativeUrl '/./' document.url}}}");
             </script>
         </div> <!-- end container -->
 

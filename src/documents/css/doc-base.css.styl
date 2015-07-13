@@ -50,7 +50,11 @@ table-border-color = #e7e7e7;
 uio-toc-background = #efefef;
 
 /* Transition Time */
-transitionTime = 0.5s; // use the same time on transitions so everything moves the same time.
+// use the same time on transitions so everything moves the same time.
+transitionTime = 0s;
+// TODO: there is an issue where the hide/show link pops into position before
+// width transition has finished on the TOC. For now set the transition time
+// to 0 to avoid this issue.
 
 @font-face {
     font-family: "OpenSans";
@@ -299,6 +303,9 @@ Delete - does not seem to be used?
     transition: width transitionTime;
     padding: 1.5rem;
     border-right: 0.2rem solid toc-border-color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
 
 .doc-base-TOC-hideShow {
@@ -308,6 +315,7 @@ Delete - does not seem to be used?
     min-width: 9rem;
     width: 9rem;
     background: toc-background;
+    z-index: 1;
 }
 
 .doc-base-TOC-hideShow:after {
@@ -383,19 +391,22 @@ Delete - does not seem to be used?
     color: toc-active-color;
     background: toc-active-background;
 }
-
-// For medium screens and up.
 @media only screen and (min-width: 40.063em) {
     .doc-base-articleBody {
         // set this padding so that the content and hide/show button do not
         // overlap.
         padding-left: 7rem;
     }
+
+    .doc-base-TOC-hideShow {
+        position: relative;
+        right: -25%;
+    }
 }
 
 /* Hiding the ToC sidebar
 To Hide, add .doc-base-hide-sidebar to <body> */
-.doc-base-hide-sidebar {
+.doc-base-sidebar-visibility {
     .doc-base-articleBody {
         width: 100%;
     }
@@ -427,7 +438,7 @@ To Hide, add .doc-base-hide-sidebar to <body> */
     /* When the sidebar is hidden, show the article. Otherwise, hide the article.
     */
 
-    .doc-base-hide-sidebar .show-for-screenreader-small {
+    .doc-base-sidebar-visibility .show-for-screenreader-small {
         /* Set width, height, clipping, overflow etc to default when something
         is to be visible. */
         clip: auto;
@@ -447,8 +458,12 @@ To Hide, add .doc-base-hide-sidebar to <body> */
         position: absolute !important;
     }
 
-    .doc-base-hide-sidebar .doc-base-TOC-hideShow a {
+    .doc-base-sidebar-visibility .doc-base-TOC-hideShow a {
         float: left;
+    }
+
+    .doc-base-TOC-container {
+        position: inherit;
     }
 }
 

@@ -1,13 +1,32 @@
 # Doc-base Starter Content
 
 This package includes sample content, styles, and navigation which you can
-customize to create your own documentation site.
+customize to create your own documentation site using Docpad.
 
-# How to Use
+# Get Started
 
-1. Get the doc-base project by running `npm install something`
-2. Get the doc-base-starter project using git:
-`git clone https://the-doc-base-start-url <your directory>`
+1. Install DocPad: `sudo npm install -g docpad`
+2. Get the node modules for this project: `npm install`
+3. Generate the HTML. This will create output in the ./out/ directory: `docpad generate --env static`
+4. Open the index.html located in the ./out/ directory in a web browser.
+
+# Updating `doc-base`
+
+Doc-base-start depends on the doc-base project. To update doc-base project,
+you will need to:
+
+1. Delete ./out/ directory
+2. Delete ./node_modules/
+3. Run `npm install`
+
+# Deploy to GitHub Pages
+
+```
+docpad deploy-ghpages --env static
+```
+
+*Note:* The above command will deploy to the origin of the repository. To deploy
+to production, you may need to be working from Master, not a fork.
 
 # What is all this stuff?
 
