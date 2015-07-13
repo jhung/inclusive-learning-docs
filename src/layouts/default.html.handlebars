@@ -22,9 +22,9 @@
         <script type="text/javascript" src="{{{getRelativeUrl '/lib/infusion/infusion-uio.js' document.url}}}"></script>
         <script type="text/javascript" src="{{{getRelativeUrl '/js/DocBase.js' document.url}}}"></script>
     </head>
-    <body class="doc-base doc-base-sidebar-visibility">
+    <body class="doc-base doc-base-start-sidebar-visibility">
 
-        <div class="container doc-base-container">
+        <div class="container doc-base-start-container">
 
             <!-- Skip Link -->
             <div id="skip">
@@ -48,16 +48,16 @@
             </div>
             <!-- END markup for Preference Editor -->
 
-            <header class="row doc-base-header doc-base-header">
-                <div class="doc-base-logo small-12 medium-5 column">
-                    <a class="doc-base-logoText" href="{{{getRelativeUrl '/index.html' document.url}}}" title="Doc Base">Doc Base</a>
+            <header class="row doc-base-start-header doc-base-start-header">
+                <div class="doc-base-start-logo small-12 medium-5 column">
+                    <a class="doc-base-start-logoText" href="{{{getRelativeUrl '/index.html' document.url}}}" title="Doc Base">Doc Base</a>
                 </div>
 
                 <nav class="small-12 medium-7 column">
                     {{! Highlight the (active) category the document belongs to. }}
                     {{#each siteStructure}}
                         {{#ifEqual category ../document.category}}
-                            <a href="{{{getRelativeUrl categoryHref ../../document.url}}}" title="{{category}}" class="doc-base-category-active">{{category}}</a>
+                            <a href="{{{getRelativeUrl categoryHref ../../document.url}}}" title="{{category}}" class="doc-base-start-category-active">{{category}}</a>
                         {{else}}
                             <a href="{{{getRelativeUrl categoryHref ../../document.url}}}" title="{{category}}">{{category}}</a>
                         {{/ifEqual}}
@@ -65,22 +65,22 @@
                 </nav>
             </header>
 
-            <div class="row doc-base-mainBody">
-                <div class="doc-base-TOC-container small-8 medium-3 column">
-                    <nav id="tableOfContents" class="doc-base-TOC" tabindex="-1">
+            <div class="row doc-base-start-mainBody">
+                <div class="doc-base-start-TOC-container small-8 medium-3 column">
+                    <nav id="tableOfContents" class="doc-base-start-TOC" tabindex="-1">
                         {{#each siteStructure}}
                             {{! Output only the table of contents matching the current document's category }}
                             {{#ifEqual category ../document.category}}
-                                <h2 class="doc-base-category">{{category}}</h2>
+                                <h2 class="doc-base-start-category">{{category}}</h2>
                                 {{#each sections}}
-                                    <h3 class="doc-base-sectionName">{{sectionName}}</h3>
+                                    <h3 class="doc-base-start-sectionName">{{sectionName}}</h3>
                                     <ul>
                                         {{#each pages}}
                                             <li>
                                                 {{#ifEqual href ../../../../document.url}}
-                                                    <span class="doc-base-TOC-item doc-base-TOC-active">{{pageName}}</span>
+                                                    <span class="doc-base-start-TOC-item doc-base-start-TOC-active">{{pageName}}</span>
                                                 {{else}}
-                                                    <a href="{{getRelativeUrl href ../../../../../document.url}}"><span class="doc-base-TOC-item">{{pageName}}</span></a>
+                                                    <a href="{{getRelativeUrl href ../../../../../document.url}}"><span class="doc-base-start-TOC-item">{{pageName}}</span></a>
                                                 {{/ifEqual}}
                                             </li>
                                         {{/each}}
@@ -90,20 +90,20 @@
                         {{/each}}
                     </nav>
                 </div>
-                <div class="small-4 medium-1 column doc-base-TOC-hideShow">
+                <div class="small-4 medium-1 column doc-base-start-TOC-hideShow">
                     <a href="#" class="doc-basec-topics" aria-label="Hide or Show List of Articles">Topics</a>
                 </div>
 
 
-                <article id="content" class="doc-base-articleBody show-for-screenreader-small small-12 medium-8 column" tabindex="-1">
+                <article id="content" class="doc-base-start-articleBody show-for-screenreader-small small-12 medium-8 column" tabindex="-1">
 
-                    <div class="flc-toc-tocContainer doc-base-uio-toc"> </div>
+                    <div class="flc-toc-tocContainer doc-base-start-uio-toc"> </div>
 
                     <h1>{{document.title}}</h1>
 
-                    <p class="doc-base-githubLink"><a href="{{getGithubLocation}}" target="_blank">Edit on GitHub</a></p>
+                    <p class="doc-base-start-githubLink"><a href="{{getGithubLocation}}" target="_blank">Edit on GitHub</a></p>
 
-                    <div class="doc-base-articleContent">
+                    <div class="doc-base-start-articleContent">
                         {{{rewriteMdLinks content}}}
                     </div>
 
@@ -111,7 +111,7 @@
 
             </div>
 
-            <footer class="row doc-base-footer">
+            <footer class="row doc-base-start-footer">
                 <p>Created by the <a href="http://fluidproject.org/" target="_blank">Fluid Project</a>,<br/>
                 a project of the <a href="http://idrc.ocad.ca/" target="_blank">Inclusive Design Research Centre</a> at <a href="http://www.ocadu.ca/" target="_blank">OCAD University</a>.</p>
             </footer>

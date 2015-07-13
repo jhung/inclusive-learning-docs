@@ -97,7 +97,7 @@ html body {
     font-family: doc-fonts;
 }
 
-.doc-base-container {
+.doc-base-start-container {
     min-width: 30rem;
 }
 
@@ -154,30 +154,30 @@ html body {
 }
 
 /* Header and Footer */
-.doc-base-header,
-.doc-base-footer {
+.doc-base-start-header,
+.doc-base-start-footer {
     background-color: header-footer-background;
     color: header-footer-color;
     font-family: doc-fonts;
 }
 
-.doc-base-header a,
-.doc-base-footer a {
+.doc-base-start-header a,
+.doc-base-start-footer a {
     color: header-footer-link;
 }
 
-.doc-base-header a:focus,
-.doc-base-footer a:focus {
+.doc-base-start-header a:focus,
+.doc-base-start-footer a:focus {
     outline: header-footer-focus;
 }
 
-.doc-base-header a:hover,
-.doc-base-footer a:hover {
+.doc-base-start-header a:hover,
+.doc-base-start-footer a:hover {
     color: header-footer-hover-color;
     background: header-footer-hover-background;
 }
 
-.doc-base-header {
+.doc-base-start-header {
     min-height: 7rem;
     font-size: 1.1rem;
     text-align: right;
@@ -186,22 +186,22 @@ html body {
     max-width: 100%;
 }
 
-.doc-base-header a {
+.doc-base-start-header a {
     text-decoration: none;
 }
 
-.doc-base-header .doc-base-logo {
+.doc-base-start-header .doc-base-start-logo {
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
     margin-top: 2rem;
     text-align: left;
 }
 
-.doc-base-header .doc-base-logo a {
+.doc-base-start-header .doc-base-start-logo a {
     padding: 1rem;
 }
 
-.doc-base-header .doc-base-logoText:before {
+.doc-base-start-header .doc-base-start-logoText:before {
     font-family: "logo";
     content: "\e91f";
     font-size: 2rem;
@@ -209,68 +209,68 @@ html body {
     padding-right: 0.2rem;
 }
 
-.doc-base-header nav {
+.doc-base-start-header nav {
     margin-top: 1rem;
 }
 
-.doc-base-header nav a {
+.doc-base-start-header nav a {
     color: header-nav-link;
     padding: 0.2rem;
     margin: 0 1rem;
 }
 
-.doc-base-category-active {
+.doc-base-start-category-active {
     border-bottom: header-active-category;
 }
 
-.doc-base-footer {
+.doc-base-start-footer {
     padding-top: 2rem;
     font-size: 1.1rem;
     text-align: center;
     max-width: 100%;
 }
 
-.doc-base-footer p {
+.doc-base-start-footer p {
     font-size: 0.8rem;
 }
 
 /*
 
 Delete - does not seem to be used?
-.doc-base-container .doc-base-header .doc-base-linkDOCS {
+.doc-base-start-container .doc-base-start-header .doc-base-start-linkDOCS {
     color: #FFCB00;
 }
 
-.doc-base-container .doc-base-header .doc-base-linkDOCS:hover {
+.doc-base-start-container .doc-base-start-header .doc-base-start-linkDOCS:hover {
     color: #FFCB00;
     background: none;
 }
 */
 
 /* Main body area - contains sidebar and article, excludes header and footer */
-.doc-base-mainBody {
+.doc-base-start-mainBody {
     margin: 0;
     position: relative;
 }
 
 /* the article body */
-.doc-base-articleBody  {
+.doc-base-start-articleBody  {
     padding: 5.5rem 2rem 6rem 4rem;
     min-height: 44rem;
     background: doc-articleBody;
     transition: width transitionTime;
 }
 
-.doc-base-articleBody p {
+.doc-base-start-articleBody p {
     font-size: 1.2rem;
 }
 
-.doc-base-articleBody a:hover {
+.doc-base-start-articleBody a:hover {
     color: link-hover-color;
     background: link-hover-background;
 }
 
-.doc-base-articleBody pre code {
+.doc-base-start-articleBody pre code {
     font-weight: normal;
     border: code-block-border;
     border-radius: 0.2rem;
@@ -278,27 +278,27 @@ Delete - does not seem to be used?
     margin-bottom: 1rem;
 }
 
-.doc-base-articleBody code {
+.doc-base-start-articleBody code {
     font-weight: normal;
     color: code-block-color;
     background-color: code-block-background;
     font-size: inherit;
 }
 
-.doc-base-articleBody code a,
-.doc-base-articleBody a code {
+.doc-base-start-articleBody code a,
+.doc-base-start-articleBody a code {
     font-size: inherit;
     border-bottom: 0.1rem dotted code-block-link-color;
     color: code-block-link-color;
     background: 0;
 }
 
-.doc-base-articleBody table td {
+.doc-base-start-articleBody table td {
     border: 1rem solid table-border-color;
 }
 
 /* Table of Contents */
-.doc-base-TOC-container {
+.doc-base-start-TOC-container {
     background: toc-background;
     transition: width transitionTime;
     padding: 1.5rem;
@@ -308,7 +308,7 @@ Delete - does not seem to be used?
     bottom: 0;
 }
 
-.doc-base-TOC-hideShow {
+.doc-base-start-TOC-hideShow {
     line-height: 2.3rem !important; // prevent UIO from changing this.
     padding: 0.5rem;
     margin-top: 1rem;
@@ -318,7 +318,7 @@ Delete - does not seem to be used?
     z-index: 1;
 }
 
-.doc-base-TOC-hideShow:after {
+.doc-base-start-TOC-hideShow:after {
     border-bottom: 2.3rem solid toc-background;
     border-right: 2.1rem solid doc-content-background;
     border-top: 2.2rem solid toc-background;
@@ -329,7 +329,7 @@ Delete - does not seem to be used?
     top: 0;
 }
 
-.doc-base-TOC-hideShow a {
+.doc-base-start-TOC-hideShow a {
     margin-right: 0rem;
     margin-top: 0rem;
     background: toc-background;
@@ -338,40 +338,40 @@ Delete - does not seem to be used?
     width: 100%;
 }
 
-.doc-base-TOC-hideShow a:before {
+.doc-base-start-TOC-hideShow a:before {
     content: "\2630";
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
 }
 
-.doc-base-TOC {
+.doc-base-start-TOC {
     width: 100%;
     transition: width transitionTime;
 }
 
-.doc-base-TOC ul {
+.doc-base-start-TOC ul {
     list-style-type: none;
 }
 
-.doc-base-TOC li {
+.doc-base-start-TOC li {
     padding: 0.6rem 0;
 }
 
-.doc-base-TOC .doc-base-category {
+.doc-base-start-TOC .doc-base-start-category {
     font-family: 'OpenSans-Bold';
     margin-bottom: 1rem;
     font-weight: bold;
     font-size: 1.6rem;
 }
 
-.doc-base-TOC .doc-base-sectionName {
+.doc-base-start-TOC .doc-base-start-sectionName {
     font-weight: normal;
     font-size: 1rem;
     margin:0;
 }
 
-.doc-base-TOC .doc-base-TOC-item {
+.doc-base-start-TOC .doc-base-start-TOC-item {
     padding: 0.2rem;
     border: none;
     color: toc-item-color;
@@ -379,41 +379,41 @@ Delete - does not seem to be used?
     width:100%;
 }
 
-.doc-base-TOC a:focus,
-.doc-base-TOC a:hover {
+.doc-base-start-TOC a:focus,
+.doc-base-start-TOC a:hover {
     color: toc-item-hover-color;
     background: toc-item-hover-background;
     outline: toc-item-hover-border;
     text-decoration: none;
 }
 
-.doc-base-TOC .doc-base-TOC-item.doc-base-TOC-active {
+.doc-base-start-TOC .doc-base-start-TOC-item.doc-base-start-TOC-active {
     color: toc-active-color;
     background: toc-active-background;
 }
 @media only screen and (min-width: 40.063em) {
-    .doc-base-articleBody {
+    .doc-base-start-articleBody {
         // set this padding so that the content and hide/show button do not
         // overlap.
         padding-left: 7rem;
     }
 
-    .doc-base-TOC-hideShow {
+    .doc-base-start-TOC-hideShow {
         position: relative;
         right: -25%;
     }
 }
 
 /* Hiding the ToC sidebar
-To Hide, add .doc-base-hide-sidebar to <body> */
+To Hide, add .doc-base-start-hide-sidebar to <body> */
 /* TODO: Initially the sidebar should be visible for medium screens and hidden
 for small screens. */
-.doc-base-sidebar-visibility {
-    .doc-base-articleBody {
+.doc-base-start-sidebar-visibility {
+    .doc-base-start-articleBody {
         width: 100%;
     }
 
-    .doc-base-TOC {
+    .doc-base-start-TOC {
         clip: rect(1px, 1px, 1px, 1px);
         height: 1px;
         overflow: hidden;
@@ -421,13 +421,13 @@ for small screens. */
         width: 1px;
     }
 
-    .doc-base-TOC-hideShow {
+    .doc-base-start-TOC-hideShow {
         position: relative;
         right: 0;
         z-index: 1;
     }
 
-    .doc-base-TOC-container {
+    .doc-base-start-TOC-container {
         padding: 0;
         width: 0;
         margin-top: 1.5rem;
@@ -440,7 +440,7 @@ for small screens. */
     /* When the sidebar is hidden, show the article. Otherwise, hide the article.
     */
 
-    .doc-base-sidebar-visibility .show-for-screenreader-small {
+    .doc-base-start-sidebar-visibility .show-for-screenreader-small {
         /* Set width, height, clipping, overflow etc to default when something
         is to be visible. */
         clip: auto;
@@ -460,18 +460,18 @@ for small screens. */
         position: absolute !important;
     }
 
-    .doc-base-sidebar-visibility .doc-base-TOC-hideShow a {
+    .doc-base-start-sidebar-visibility .doc-base-start-TOC-hideShow a {
         float: left;
     }
 
-    .doc-base-TOC-container {
+    .doc-base-start-TOC-container {
         position: inherit;
     }
 }
 
 
 /* Main Content Area */
-.doc-base-note {
+.doc-base-start-note {
     border-left: solid;
     border-left-width: 0.3rem;
     border-color: doc-content-note-border;
@@ -480,11 +480,11 @@ for small screens. */
     margin-bottom: 2rem;
 }
 
-.doc-base-githubLink {
+.doc-base-start-githubLink {
     margin-bottom: 2rem;
 }
 
-.doc-base-githubLink a:before {
+.doc-base-start-githubLink a:before {
     display: inline-block;
     vertical-align: bottom;
     font-family: "github";
@@ -493,34 +493,34 @@ for small screens. */
     padding-right: 0.5rem;
 }
 
-.doc-base-articleBody h1 {
+.doc-base-start-articleBody h1 {
     font-size: 3.0rem;
     font-family: doc-header-font;
 }
 
-.doc-base-articleBody h2 {
+.doc-base-start-articleBody h2 {
     font-size: 2.5rem;
     font-family: doc-header-font;
 }
 
-.doc-base-articleBody h3 {
+.doc-base-start-articleBody h3 {
     font-size: 1.5rem;
     font-family: doc-header-font;
 }
 
-.doc-base-articleBody > p:first-child {
+.doc-base-start-articleBody > p:first-child {
     font-size: 1.4rem;
 }
 
-.doc-base-paragraphBullets {
+.doc-base-start-paragraphBullets {
     font-size: 1.3rem;
 }
 
-.doc-base-paragraphBullets li {
+.doc-base-start-paragraphBullets li {
     padding-bottom: 0.25rem;
 }
 
-.doc-base-figure {
+.doc-base-start-figure {
     margin: 0 0 1.5rem 0;
     text-align: center;
     background-color: doc-content-figure-background;
@@ -528,7 +528,7 @@ for small screens. */
     padding-bottom: 1.1rem;
 }
 
-.doc-base-figureCaption {
+.doc-base-start-figureCaption {
     padding-top: 1rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -553,15 +553,15 @@ for small screens. */
     margin-bottom: 0.7rem;
 }
 
-.doc-base-uio-toc {
+.doc-base-start-uio-toc {
     background: uio-toc-background;
 }
 
-.doc-base-uio-toc ul {
+.doc-base-start-uio-toc ul {
     list-style-type: none;
 }
 
-.doc-base-uio-toc li {
+.doc-base-start-uio-toc li {
     margin: 0.8rem 0;
 }
 
@@ -574,17 +574,17 @@ for small screens. */
 }
 
 /* Styles for high-contrast themes */
-.fl-theme-yb .doc-base-fluidLogoText::before {
+.fl-theme-yb .doc-base-start-fluidLogoText::before {
     color: #ff0 !important;
 }
-.fl-theme-wb .doc-base-fluidLogoText::before {
+.fl-theme-wb .doc-base-start-fluidLogoText::before {
     color: #ffffff !important;
 }
-.fl-theme-by .doc-base-fluidLogoText::before,
-.fl-theme-bw .doc-base-fluidLogoText::before {
+.fl-theme-by .doc-base-start-fluidLogoText::before,
+.fl-theme-bw .doc-base-start-fluidLogoText::before {
     color: #000000 !important;
 }
-.fl-theme-lgdg .doc-base-fluidLogoText::before {
+.fl-theme-lgdg .doc-base-start-fluidLogoText::before {
     color: #bdbdbb !important;
 }
 
@@ -609,133 +609,133 @@ for small screens. */
 }
 
 // inverted colours.
-.fl-theme-bw .doc-base-container a:hover,
-.fl-theme-bw .doc-base-container a:hover .doc-base-TOC-item,
+.fl-theme-bw .doc-base-start-container a:hover,
+.fl-theme-bw .doc-base-start-container a:hover .doc-base-start-TOC-item,
 .fl-theme-bw .fl-prefsEditor-buttons button:hover,
-.fl-theme-bw .doc-base-header a:hover:before,
-.fl-theme-bw .doc-base-TOC-hideShow,
-.fl-theme-bw .doc-base-TOC-hideShow a,
-.fl-theme-bw .doc-base-header,
-.fl-theme-bw .doc-base-header div,
-.fl-theme-bw .doc-base-header nav,
-.fl-theme-bw .doc-base-header a,
-.fl-theme-bw .doc-base-footer,
-.fl-theme-bw .doc-base-footer a,
-.fl-theme-bw .doc-base-footer p {
+.fl-theme-bw .doc-base-start-header a:hover:before,
+.fl-theme-bw .doc-base-start-TOC-hideShow,
+.fl-theme-bw .doc-base-start-TOC-hideShow a,
+.fl-theme-bw .doc-base-start-header,
+.fl-theme-bw .doc-base-start-header div,
+.fl-theme-bw .doc-base-start-header nav,
+.fl-theme-bw .doc-base-start-header a,
+.fl-theme-bw .doc-base-start-footer,
+.fl-theme-bw .doc-base-start-footer a,
+.fl-theme-bw .doc-base-start-footer p {
     color: #ffffff !important;
     background: #000000 !important;
 }
 
-.fl-theme-wb .doc-base-container a:hover,
-.fl-theme-wb .doc-base-container a:hover .doc-base-TOC-item,
+.fl-theme-wb .doc-base-start-container a:hover,
+.fl-theme-wb .doc-base-start-container a:hover .doc-base-start-TOC-item,
 .fl-theme-wb .fl-prefsEditor-buttons button:hover,
-.fl-theme-wb .doc-base-header a:hover:before,
-.fl-theme-wb .doc-base-TOC-hideShow,
-.fl-theme-wb .doc-base-TOC-hideShow a,
-.fl-theme-wb .doc-base-header,
-.fl-theme-wb .doc-base-header div,
-.fl-theme-wb .doc-base-header nav,
-.fl-theme-wb .doc-base-header a,
-.fl-theme-wb .doc-base-footer,
-.fl-theme-wb .doc-base-footer a,
-.fl-theme-wb .doc-base-footer p {
+.fl-theme-wb .doc-base-start-header a:hover:before,
+.fl-theme-wb .doc-base-start-TOC-hideShow,
+.fl-theme-wb .doc-base-start-TOC-hideShow a,
+.fl-theme-wb .doc-base-start-header,
+.fl-theme-wb .doc-base-start-header div,
+.fl-theme-wb .doc-base-start-header nav,
+.fl-theme-wb .doc-base-start-header a,
+.fl-theme-wb .doc-base-start-footer,
+.fl-theme-wb .doc-base-start-footer a,
+.fl-theme-wb .doc-base-start-footer p {
     color: #000000 !important;
     background: #ffffff !important;
 }
 
-.fl-theme-by .doc-base-container a:hover,
-.fl-theme-by .doc-base-container a:hover .doc-base-TOC-item,
+.fl-theme-by .doc-base-start-container a:hover,
+.fl-theme-by .doc-base-start-container a:hover .doc-base-start-TOC-item,
 .fl-theme-by .fl-prefsEditor-buttons button:hover,
-.fl-theme-by .doc-base-header a:hover:before,
-.fl-theme-by .doc-base-TOC-hideShow,
-.fl-theme-by .doc-base-TOC-hideShow a,
-.fl-theme-by .doc-base-header,
-.fl-theme-by .doc-base-header div,
-.fl-theme-by .doc-base-header nav,
-.fl-theme-by .doc-base-header a,
-.fl-theme-by .doc-base-footer,
-.fl-theme-by .doc-base-footer a,
-.fl-theme-by .doc-base-footer p {
+.fl-theme-by .doc-base-start-header a:hover:before,
+.fl-theme-by .doc-base-start-TOC-hideShow,
+.fl-theme-by .doc-base-start-TOC-hideShow a,
+.fl-theme-by .doc-base-start-header,
+.fl-theme-by .doc-base-start-header div,
+.fl-theme-by .doc-base-start-header nav,
+.fl-theme-by .doc-base-start-header a,
+.fl-theme-by .doc-base-start-footer,
+.fl-theme-by .doc-base-start-footer a,
+.fl-theme-by .doc-base-start-footer p {
     color: #ff0 !important;
     background: #000000 !important;
 }
 
-.fl-theme-yb .doc-base-container a:hover,
-.fl-theme-yb .doc-base-container a:hover .doc-base-TOC-item,
+.fl-theme-yb .doc-base-start-container a:hover,
+.fl-theme-yb .doc-base-start-container a:hover .doc-base-start-TOC-item,
 .fl-theme-yb .fl-prefsEditor-buttons button:hover,
-.fl-theme-yb .doc-base-header a:hover:before,
-.fl-theme-yb .doc-base-TOC-hideShow,
-.fl-theme-yb .doc-base-TOC-hideShow a,
-.fl-theme-yb .doc-base-header,
-.fl-theme-yb .doc-base-header div,
-.fl-theme-yb .doc-base-header nav,
-.fl-theme-yb .doc-base-header a,
-.fl-theme-yb .doc-base-footer,
-.fl-theme-yb .doc-base-footer a,
-.fl-theme-yb .doc-base-footer p {
+.fl-theme-yb .doc-base-start-header a:hover:before,
+.fl-theme-yb .doc-base-start-TOC-hideShow,
+.fl-theme-yb .doc-base-start-TOC-hideShow a,
+.fl-theme-yb .doc-base-start-header,
+.fl-theme-yb .doc-base-start-header div,
+.fl-theme-yb .doc-base-start-header nav,
+.fl-theme-yb .doc-base-start-header a,
+.fl-theme-yb .doc-base-start-footer,
+.fl-theme-yb .doc-base-start-footer a,
+.fl-theme-yb .doc-base-start-footer p {
     color: #000000 !important;
     background: #ff0 !important;
 }
 
-.fl-theme-lgdg .doc-base-container a:hover,
-.fl-theme-lgdg .doc-base-container a:hover .doc-base-TOC-item,
+.fl-theme-lgdg .doc-base-start-container a:hover,
+.fl-theme-lgdg .doc-base-start-container a:hover .doc-base-start-TOC-item,
 .fl-theme-lgdg .fl-prefsEditor-buttons button:hover,
-.fl-theme-lgdg .doc-base-header a:hover:before,
-.fl-theme-lgdg .doc-base-TOC-hideShow,
-.fl-theme-lgdg .doc-base-TOC-hideShow a,
-.fl-theme-lgdg .doc-base-header,
-.fl-theme-lgdg .doc-base-header div,
-.fl-theme-lgdg .doc-base-header nav,
-.fl-theme-lgdg .doc-base-header a,
-.fl-theme-lgdg .doc-base-footer,
-.fl-theme-lgdg .doc-base-footer a,
-.fl-theme-lgdg .doc-base-footer p {
+.fl-theme-lgdg .doc-base-start-header a:hover:before,
+.fl-theme-lgdg .doc-base-start-TOC-hideShow,
+.fl-theme-lgdg .doc-base-start-TOC-hideShow a,
+.fl-theme-lgdg .doc-base-start-header,
+.fl-theme-lgdg .doc-base-start-header div,
+.fl-theme-lgdg .doc-base-start-header nav,
+.fl-theme-lgdg .doc-base-start-header a,
+.fl-theme-lgdg .doc-base-start-footer,
+.fl-theme-lgdg .doc-base-start-footer a,
+.fl-theme-lgdg .doc-base-start-footer p {
     color: #555555 !important;
     background: #bdbdbb !important;
 }
 
 // Hide show button contrast styling
-.fl-theme-bw .doc-base-TOC-hideShow:after {
+.fl-theme-bw .doc-base-start-TOC-hideShow:after {
     border-bottom: 2.3rem solid #000;
     border-right: 2.1rem solid #fff;
     border-top: 2.2rem solid #000;
 }
 
-.fl-theme-bw .doc-base-TOC-hideShow a:focus,
-.fl-theme-bw .doc-base-TOC-hideShow a:hover {
+.fl-theme-bw .doc-base-start-TOC-hideShow a:focus,
+.fl-theme-bw .doc-base-start-TOC-hideShow a:hover {
     background: #fff !important;
     color: #000 !important;
 }
 
-.fl-theme-wb .doc-base-TOC-hideShow:after {
+.fl-theme-wb .doc-base-start-TOC-hideShow:after {
     border-bottom: 2.3rem solid #fff;
     border-right: 2.1rem solid #000;
     border-top: 2.2rem solid #fff;
 }
 
-.fl-theme-yb .doc-base-TOC-hideShow:after {
+.fl-theme-yb .doc-base-start-TOC-hideShow:after {
     border-bottom: 2.3rem solid #ff0;
     border-right: 2.1rem solid #000;
     border-top: 2.2rem solid #ff0;
 }
 
-.fl-theme-by .doc-base-TOC-hideShow:after {
+.fl-theme-by .doc-base-start-TOC-hideShow:after {
     border-bottom: 2.3rem solid #000;
     border-right: 2.1rem solid #ff0;
     border-top: 2.2rem solid #000;
 }
 
-.fl-theme-lgdg .doc-base-TOC-hideShow a:after {
+.fl-theme-lgdg .doc-base-start-TOC-hideShow a:after {
     border-bottom: 2.3rem solid #bdbdbb;
     border-right: 2.1rem solid #555;
     border-top: 2.2rem solid #bdbdbb;
 }
 
 // Header focus styling
-.fl-theme-bw .doc-base-header a:hover,
-.fl-theme-bw .doc-base-header a:focus,
-.fl-theme-bw .doc-base-footer a:hover,
-.fl-theme-bw .doc-base-footer a:focus {
+.fl-theme-bw .doc-base-start-header a:hover,
+.fl-theme-bw .doc-base-start-header a:focus,
+.fl-theme-bw .doc-base-start-footer a:hover,
+.fl-theme-bw .doc-base-start-footer a:focus {
     background: #fff !important;
     color: #000 !important;
     box-shadow:
@@ -743,10 +743,10 @@ for small screens. */
         0 0 0 0.4rem #fff;
 }
 
-.fl-theme-wb .doc-base-header a:hover,
-.fl-theme-wb .doc-base-header a:focus,
-.fl-theme-wb .doc-base-footer a:hover,
-.fl-theme-wb .doc-base-footer a:focus {
+.fl-theme-wb .doc-base-start-header a:hover,
+.fl-theme-wb .doc-base-start-header a:focus,
+.fl-theme-wb .doc-base-start-footer a:hover,
+.fl-theme-wb .doc-base-start-footer a:focus {
     background: #000 !important;
     color: #fff !important;
     box-shadow:
@@ -754,10 +754,10 @@ for small screens. */
         0 0 0 0.4rem #000;
 }
 
-.fl-theme-by .doc-base-header a:hover,
-.fl-theme-by .doc-base-header a:focus,
-.fl-theme-by .doc-base-footer a:hover,
-.fl-theme-by .doc-base-footer a:focus {
+.fl-theme-by .doc-base-start-header a:hover,
+.fl-theme-by .doc-base-start-header a:focus,
+.fl-theme-by .doc-base-start-footer a:hover,
+.fl-theme-by .doc-base-start-footer a:focus {
     background: #ff0 !important;
     color: #000 !important;
     box-shadow:
@@ -765,10 +765,10 @@ for small screens. */
         0 0 0 0.4rem #ff0;
 }
 
-.fl-theme-yb .doc-base-header a:hover,
-.fl-theme-yb .doc-base-header a:focus,
-.fl-theme-yb .doc-base-footer a:hover,
-.fl-theme-yb .doc-base-footer a:focus {
+.fl-theme-yb .doc-base-start-header a:hover,
+.fl-theme-yb .doc-base-start-header a:focus,
+.fl-theme-yb .doc-base-start-footer a:hover,
+.fl-theme-yb .doc-base-start-footer a:focus {
     background: #000 !important;
     color: #ff0 !important;
     box-shadow:
@@ -776,10 +776,10 @@ for small screens. */
         0 0 0 0.4rem #000;
 }
 
-.fl-theme-lgdg .doc-base-header a:hover,
-.fl-theme-lgdg .doc-base-header a:focus,
-.fl-theme-lgdg .doc-base-footer a:hover,
-.fl-theme-lgdg .doc-base-footer a:focus {
+.fl-theme-lgdg .doc-base-start-header a:hover,
+.fl-theme-lgdg .doc-base-start-header a:focus,
+.fl-theme-lgdg .doc-base-start-footer a:hover,
+.fl-theme-lgdg .doc-base-start-footer a:focus {
     background: #555 !important;
     color: #bdbdbb !important;
     box-shadow:
@@ -787,19 +787,19 @@ for small screens. */
         0 0 0 0.4rem #555;
 }
 
-.fl-theme-bw .doc-base-category-active {
+.fl-theme-bw .doc-base-start-category-active {
     border-color: #fff !important;
 }
 
-.fl-theme-wb .doc-base-category-active,
-.fl-theme-yb .doc-base-category-active {
+.fl-theme-wb .doc-base-start-category-active,
+.fl-theme-yb .doc-base-start-category-active {
     border-color: #000 !important;
 }
 
-.fl-theme-by .doc-base-category-active {
+.fl-theme-by .doc-base-start-category-active {
     border-color: #ff0 !important;
 }
 
-.fl-theme-lgdg .doc-base-category-active {
+.fl-theme-lgdg .doc-base-start-category-active {
     border-color: #555 !important;
 }
