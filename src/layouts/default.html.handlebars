@@ -18,7 +18,7 @@
         <script type="text/javascript" src="{{{getRelativeUrl '/lib/infusion/infusion-uio.js' document.url}}}"></script>
         <script type="text/javascript" src="{{{getRelativeUrl '/js/DocBase.js' document.url}}}"></script>
     </head>
-    <body class="doc-base doc-base-start-sidebar-visibility">
+    <body class="doc-base doc-base-sidebar-visibility">
 
         <div class="container doc-base-start-container">
 
@@ -62,7 +62,7 @@
             </header>
 
             <div class="row doc-base-start-mainBody">
-                <div class="doc-base-start-TOC-container small-8 medium-3 column">
+                <div id="side" class="doc-base-start-TOC-container small-8 medium-3 column">
                     <nav id="tableOfContents" class="doc-base-start-TOC" tabindex="-1">
                         {{#each siteStructure}}
                             {{! Output only the table of contents matching the current document's category }}
@@ -87,11 +87,11 @@
                     </nav>
                 </div>
                 <div class="small-4 medium-1 column doc-base-start-TOC-hideShow">
-                    <a href="#" class="doc-basec-topics" aria-label="Hide or Show List of Articles">Topics</a>
+                    <a href="#" class="doc-basec-topics" aria-label="Hide or Show List of Topics">Topics</a>
                 </div>
 
 
-                <article id="content" class="doc-base-start-articleBody show-for-screenreader-small small-12 medium-8 column" tabindex="-1">
+                <article id="content" class="doc-base-start-articleBody small-12 medium-8 column" tabindex="-1">
 
                     <div class="flc-toc-tocContainer doc-base-start-uio-toc"> </div>
 
@@ -114,6 +114,18 @@
 
             <script type="text/javascript">
                 docBase.init("{{{getRelativeUrl '/./' document.url}}}");
+
+                // This code should be refactored into DocBase.js
+                // Also this function should be called each time the hideShow button is pressed since the height changes.
+                $(document).ready(function(){
+                    var sideHeight = $("#side").outerHeight();
+                    var contentHeight = $("#content").outerHeight();
+                    if (sideHeight > contentHeight) {
+                        $("#content").outerHeight(sideHeight);
+                    } else {
+                        $("#side").outerHeight(contentHeight);
+                    }
+                });
             </script>
         </div> <!-- end container -->
 
