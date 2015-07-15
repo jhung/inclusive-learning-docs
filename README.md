@@ -6,7 +6,7 @@ customize to create your own documentation site using Docpad.
 # Get Started Making a New / Custom Site
 
 1. Clone the `doc-base` project: `git clone https://github.com/jhung/doc-base`
-2. Clone the `doc-base-start` project into a custom directory: `git clone myProject https://github.com/jhung/doc-base-start`  (TODO: update this URL)
+2. Clone the `doc-base-start` project into a custom directory: `git clone https://github.com/jhung/doc-base-start myProject`  (TODO: update this URL)
 3. Change directories into myProject: `cd myProject`
 4. Install DocPad if it isn't already installed: `sudo npm install -g docpad`
 5. Get the required node modules: `npm install` (TODO: package.json looks for `doc-base` is in a sibling directory to `doc-base-start`. This should be fixed to use an URL for doc-base instead)

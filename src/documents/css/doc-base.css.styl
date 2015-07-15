@@ -7,7 +7,7 @@ link-hover-color ?= #fff;
 link-hover-background ?= #0000CB;
 
 /* Main Content Area */
-doc-content-background ?=  #fff;
+doc-body-background ?= #fff;
 doc-content-note-border ?= #000;
 
 /* Header and Footer */
@@ -47,7 +47,8 @@ hideShow-hover-color ?= #efefef;
 hideShow-hover-background ?= link-color;
 
 /* Article Body area */
-doc-articleBody ?= #fff;
+articleBody-color ?= #000;
+articleBody-background ?= #fff;
 
 figure-caption-color ?= #000;
 figure-caption-border ?= #fff;
@@ -68,9 +69,6 @@ uio-toc-background ?= #efefef;
 /* Transition Time */
 // use the same time on transitions so everything moves the same time.
 transitionTime ?= 0.5s;
-// TODO: there is an issue where the hide/show link pops into position before
-// width transition has finished on the TOC. For now set the transition time
-// to 0 to avoid this issue.
 
 /* Mixins */
 
@@ -125,6 +123,7 @@ html body {
 
 .doc-base-start-container {
     min-width: 30rem;
+    background-color: doc-body-background;
 }
 
 .doc-base pre {
@@ -293,7 +292,8 @@ Delete - does not seem to be used?
 /* the article body */
 .doc-base-start-articleBody  {
     padding: 5.5rem 2rem 6rem 4rem;
-    background: doc-articleBody;
+    color: articleBody-color;
+    background: articleBody-background;
     transition: width transitionTime;
 }
 
@@ -353,7 +353,7 @@ Delete - does not seem to be used?
 }
 
 .doc-base-start-TOC-hideShow:after {
-    contrastHideShowRibbonColor(hideShow-background, doc-content-background)
+    contrastHideShowRibbonColor(hideShow-background, doc-body-background)
     content: "";
     position:absolute;
     right: -2rem; // shift position right to match the width of the border above.
