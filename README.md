@@ -5,13 +5,14 @@ customize to create your own documentation site using Docpad.
 
 # Get Started Making a New / Custom Site
 
-1. Clone the `doc-base-start` project into a custom directory: `git clone myProject https://github.com/fluid-project/doc-base-start`
-2. Change directories into the new directory: `cd myProject`
-3. Install DocPad if it isn't already installed: `sudo npm install -g docpad`
-4. Get the required node modules: `npm install`
-5. Generate the HTML. This will create output in the ./out/ directory: `docpad generate --env static`
-6. Open the index.html located in the ./out/ directory in a web browser to confirm everything is working and to see the placeholder site.
-7. You can now customize the site.
+1. Clone the `doc-base` project: `git clone https://github.com/jhung/doc-base`
+2. Clone the `doc-base-start` project into a custom directory: `git clone myProject https://github.com/jhung/doc-base-start`  (TODO: update this URL)
+3. Change directories into myProject: `cd myProject`
+4. Install DocPad if it isn't already installed: `sudo npm install -g docpad`
+5. Get the required node modules: `npm install` (TODO: package.json looks for `doc-base` is in a sibling directory to `doc-base-start`. This should be fixed to use an URL for doc-base instead)
+6. Generate the HTML. This will create output in the ./out/ directory: `docpad generate --env static`
+7. Open the index.html located in the ./out/ directory in a web browser to confirm everything is working and to see the placeholder site.
+8. You can now customize the site.
 
 ## Files You May Want to Customize for New Sites
 
