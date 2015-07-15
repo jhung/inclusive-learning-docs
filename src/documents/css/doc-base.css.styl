@@ -338,6 +338,7 @@ Delete - does not seem to be used?
     background: toc-background;
     padding: 1.5rem;
     border-right: 0.2rem solid toc-border-color;
+    transition: width transitionTime;
 }
 
 .doc-base-start-TOC-hideShow {
@@ -440,10 +441,12 @@ Delete - does not seem to be used?
             overflow: hidden;
             padding: 0;
             width: 1px;
+            transition: width transitionTime;
         }
 
         .doc-base-start-articleBody {
             width: 100%;
+            transition: width transitionTime;
         }
 
         .doc-base-start-TOC {
@@ -466,6 +469,7 @@ Delete - does not seem to be used?
         position: absolute;
         top: 0;
         z-index: -1; // put it behind the sidebar.
+        transition: width transitionTime;
     }
 }
 
@@ -492,11 +496,13 @@ Delete - does not seem to be used?
         // make article wider to take more room.
         width: 91.66%;
         padding-left: 2rem;
+        transition: width transitionTime;
     }
 
     .doc-base-sidebar-visibility .doc-base-start-articleBody {
         // put width back to the same as Foundation's medium-8
         width: 66.6667%;
+        transition: width transitionTime;
     }
 }
 
