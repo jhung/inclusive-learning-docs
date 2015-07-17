@@ -7,7 +7,7 @@ link-hover-color = #fff;
 link-hover-background = #0000CB;
 
 /* Main Content Area */
-doc-content-background =  #F2F2F2;
+doc-body-background = #f2f2f2;
 doc-content-note-border = #000;
 
 /* Header and Footer */
@@ -15,8 +15,8 @@ header-footer-color = #fff;
 header-footer-background = #2F5508;
 header-footer-link = #FFFF78;
 header-footer-hover-color = #2F5508;
-header-footer-hover-background = #FFFF78;
-header-footer-focus = 0.2rem solid #FFFF78;
+header-footer-hover-background = #fff;
+header-footer-focus = 0.2rem solid #fff;
 header-nav-link = #fff;
 header-active-category = 0.2rem solid #fff;
 
@@ -47,7 +47,8 @@ hideShow-hover-color = #275287;
 hideShow-hover-background = #fff;
 
 /* Article Body area */
-doc-articleBody = #fff;
+articleBody-color = #000;
+articleBody-background = #f2f2f2;
 
 figure-caption-color = #000;
 figure-caption-border = #fff;
@@ -66,3 +67,30 @@ table-border-color = #e7e7e7;
 uio-toc-background = #efefef;
 
 @import "doc-base.css.styl";
+
+
+@font-face {
+    font-family: "DroidSans";
+    src: url("../fonts/DroidSans.ttf") format('truetype');
+}
+
+
+.doc-base-start-logo {
+    font-family: "DroidSans";
+    line-height: 1rem;
+    letter-spacing: auto;
+}
+
+.doc-base-start-logoText {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ildh-tagline {
+    font-size: 0.8rem;
+    display: block;
+}
+
+header nav {
+    padding: 0.5rem 0;
+}
