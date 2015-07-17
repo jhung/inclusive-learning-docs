@@ -7,7 +7,7 @@ link-hover-color ?= #fff;
 link-hover-background ?= #0000CB;
 
 /* Main Content Area */
-doc-content-background ?=  #fff;
+doc-body-background ?= #fff;
 doc-content-note-border ?= #000;
 
 /* Header and Footer */
@@ -47,7 +47,8 @@ hideShow-hover-color ?= #efefef;
 hideShow-hover-background ?= link-color;
 
 /* Article Body area */
-doc-articleBody ?= #fff;
+articleBody-color ?= #000;
+articleBody-background ?= #fff;
 
 figure-caption-color ?= #000;
 figure-caption-border ?= #fff;
@@ -68,13 +69,8 @@ uio-toc-background ?= #efefef;
 /* Transition Time */
 // use the same time on transitions so everything moves the same time.
 transitionTime ?= 0.5s;
-// TODO: there is an issue where the hide/show link pops into position before
-// width transition has finished on the TOC. For now set the transition time
-// to 0 to avoid this issue.
 
 /* Mixins */
-
-
 // generate the ribbon "tail" of the hideShow ribbon.
 contrastHideShowRibbonColor(foreground, background) {
     border-bottom: 2.2rem solid foreground;
@@ -125,6 +121,11 @@ html body {
 
 .doc-base-start-container {
     min-width: 30rem;
+    background-color: doc-body-background;
+    display: -webkit-flex;    
+    -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .doc-base pre {
@@ -175,8 +176,8 @@ html body {
 #skip a:active,
 #skip a:focus {
     height: auto;
-    position: static;
     width: auto;
+    left: auto;
 }
 
 /* Header and Footer */
@@ -271,6 +272,29 @@ html body {
     font-size: 0.8rem;
 }
 
+
+@media only screen and (max-width: 40em) {
+    .doc-base-start-header {
+        line-height: inherit;
+        padding-right: 0;
+
+    }
+
+    .doc-base-start-header .doc-base-start-logo {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .doc-base-start-header nav {
+        margin-top: 0;
+    }
+
+    .doc-base-start-header nav a {
+        color: header-nav-link;
+        padding: 0.2rem;
+    }
+}
+
 /*
 
 Delete - does not seem to be used?
@@ -292,8 +316,18 @@ Delete - does not seem to be used?
 
 /* the article body */
 .doc-base-start-articleBody  {
-    padding: 5.5rem 2rem 6rem 4rem;
-    background: doc-articleBody;
+    padding: 5.5rem 2rem 6rem 2rem;
+    color: articleBody-color;
+    background: articleBody-background;
+    transition: width transitionTime;
+
+    // make article wider to take more room.
+    width: 91.66%;
+}
+
+.doc-base-sidebar-visibility .doc-base-start-articleBody {
+    // put width back to the same as Foundation's medium-8
+    width: 66.6667%;
     transition: width transitionTime;
 }
 
@@ -336,24 +370,36 @@ Delete - does not seem to be used?
 /* Table of Contents */
 .doc-base-start-TOC-container {
     background: toc-background;
-    padding: 1.5rem;
     border-right: 0.2rem solid toc-border-color;
+    transition: width transitionTime;
+
+    // hide the TOC initially
+    overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
+    width: 1px;
+}
+
+.doc-base-sidebar-visibility .doc-base-start-TOC-container {
+    // put width back to the same as Foundation's medium-3
+    overflow: auto;
+    padding: 1.5rem;
+    width: 25%;
     transition: width transitionTime;
 }
 
 .doc-base-start-TOC-hideShow {
     line-height: 2.3rem !important; // prevent UIO from changing this.
+    margin: -4.4rem 0 0 -2rem;
     padding: 0.5rem;
-    margin-top: 1rem;
     min-width: 9rem;
     width: 9rem;
     background: hideShow-background;
     z-index: 1;
-    //transition: right transitionTime;
 }
 
 .doc-base-start-TOC-hideShow:after {
-    contrastHideShowRibbonColor(hideShow-background, doc-content-background)
+    contrastHideShowRibbonColor(hideShow-background, doc-body-background)
     content: "";
     position:absolute;
     right: -2rem; // shift position right to match the width of the border above.
@@ -432,78 +478,6 @@ Delete - does not seem to be used?
 .doc-base-start-TOC .doc-base-start-TOC-item.doc-base-start-TOC-active {
     color: toc-active-color;
     background: toc-active-background;
-}
-
-@media only screen and (max-width: 40em) {
-    // if small screen, the sidebar is visually hidden initially.
-    .doc-base-sidebar-visibility {
-        .doc-base-start-TOC-container {
-            overflow: hidden;
-            padding: 0;
-            width: 1px;
-            transition: width transitionTime;
-        }
-
-        .doc-base-start-articleBody {
-            width: 100%;
-            transition: width transitionTime;
-        }
-
-        .doc-base-start-TOC {
-            clip: rect(1px, 1px, 1px, 1px);
-            height: 1px;
-            overflow: hidden;
-            position: absolute !important;
-            width: 1px;
-        }
-
-        .doc-base-start-TOC-hideShow {
-            //transition: right transitionTime;
-            position: relative;
-            right: 0;
-            z-index: 1;
-        }
-    }
-
-    .doc-base-start-articleBody {
-        position: absolute;
-        top: 0;
-        z-index: -1; // put it behind the sidebar.
-        transition: width transitionTime;
-    }
-}
-
-// if medium screen, then sidebar is visible initially.
-@media only screen and (min-width: 40.063em) {
-    .doc-base-start-TOC-container {
-        // hide the TOC
-        overflow: hidden;
-        padding-right: 0;
-        padding-left: 0;
-        transition: width transitionTime;
-        width: 1px;
-    }
-
-    .doc-base-sidebar-visibility .doc-base-start-TOC-container {
-        // put width back to the same as Foundation's medium-3
-        overflow: auto;
-        padding: 1.5rem;
-        width: 25%;
-        transition: width transitionTime;
-    }
-
-    .doc-base-start-articleBody {
-        // make article wider to take more room.
-        width: 91.66%;
-        padding-left: 2rem;
-        transition: width transitionTime;
-    }
-
-    .doc-base-sidebar-visibility .doc-base-start-articleBody {
-        // put width back to the same as Foundation's medium-8
-        width: 66.6667%;
-        transition: width transitionTime;
-    }
 }
 
 /* Main Content Area */
