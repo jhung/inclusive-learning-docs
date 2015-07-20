@@ -7,11 +7,11 @@
   "homepage": "http://www.fluidproject.org/",
   "dependencies": {
     "doc-base": "file:../doc-base",
-    "docpad": "~6.69.1",
+    "docpad": "~6.78.1",
     "docpad-plugin-ghpages": "~2.4.4",
     "docpad-plugin-handlebars": "~2.3.0",
-    "docpad-plugin-highlightjs": "~2.2.2",
-    "docpad-plugin-marked": "~2.2.1",
+    "docpad-plugin-highlightjs": "~2.3.0",
+    "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-stylus": "~2.9.0"
   },
   "licenses": [
