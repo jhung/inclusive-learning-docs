@@ -122,7 +122,7 @@ html body {
 .doc-base-start-container {
     min-width: 30rem;
     background-color: doc-body-background;
-    display: -webkit-flex;    
+    display: -webkit-flex;
     -webkit-flex-wrap: wrap;
     display: flex;
     flex-wrap: wrap;
@@ -188,6 +188,11 @@ html body {
     font-family: doc-fonts;
 }
 
+.doc-base-start-header p,
+.doc-base-start-footer p {
+    margin-bottom: 0;
+}
+
 .doc-base-start-header a,
 .doc-base-start-footer a {
     color: header-footer-link;
@@ -207,7 +212,6 @@ html body {
 .doc-base-start-header {
     font-size: 1.1rem;
     text-align: right;
-    padding-right: 2rem;
     line-height: 2;
     max-width: 100%;
 }
@@ -247,7 +251,8 @@ html body {
 }
 
 .doc-base-start-header nav {
-    margin: 1rem 0 0.5rem 0;
+    margin: 0 0 0.5rem 0;
+    padding: 0.5rem 0;
 }
 
 .doc-base-start-header nav a {
@@ -327,7 +332,7 @@ Delete - does not seem to be used?
 
 .doc-base-sidebar-visibility .doc-base-start-articleBody {
     // put width back to the same as Foundation's medium-8
-    width: 66.6667%;
+    width: 70%;
     transition: width transitionTime;
 }
 

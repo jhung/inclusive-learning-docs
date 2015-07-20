@@ -40,12 +40,12 @@ Once this is done, you can commit to the new origin for your site.
 
 # Updating `doc-base`
 
-This project `doc-base-start` uses helper functions contained in the `doc-base` project. Periodically, doc-base will be updated.
-To get the latest updates you will need to:
+This project `doc-base-start` uses helper functions contained in the `doc-base` project. Periodically, `doc-base` will be updated.
+To get the latest updates, you will need to:
 
-1. Delete ./out/ directory
-2. Delete ./node_modules/
-3. Run `npm install`
+1. Delete the folder `./node_modules/doc-base/`.
+2. Re-run `npm install` to get the new `doc-base` project.
+3. Rebuild the output using `docpad generate --env static`.
 
 # Deploy to GitHub Pages
 
