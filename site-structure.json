@@ -8,74 +8,25 @@
                 "sectionName":"",
                 "pages":
                 [
-                    {"pageName": "Introduction", "href":"/index.html"}
+                    {"pageName": "Introduction", "href":"/index.html"},
+                    {"pageName": "Why is This Important?", "href":"/WhyIsThisImportant.html"},
+                    {"pageName": "What is the Approach?", "href":"/WhatIsTheApproach.html"}
                 ]
             }
         ]
     },
     {
-        "category": "Veggies",
-        "categoryHref": "/index-veggies.html",
-        "sections":
-        [
-            {
-                "sectionName":"Root Vegegies",
-                "pages":
-                [
-                    { "pageName": "Potato", "href": "/Potato.html" },
-                    { "pageName": "Carrots", "href": "/Carrots.html"}
-                ]
-            }
-        ]
-    },
-    {
-        "category": "Desserts",
-        "categoryHref": "/index-desserts.html",
+        "category": "Methods",
+        "categoryHref": "/Methods.html",
         "sections":
         [
             {
                 "sectionName":"",
                 "pages":
                 [
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"},
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"},
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"},
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"},
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"},
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"},
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"},
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"},
-                    { "pageName": "Black Forest", "href": "/BlackForest.html" },
-                    { "pageName": "Cheese Cake", "href": "/CheeseCake.html"},
-                    { "pageName": "Ice cream", "href": "/IceCream.html" },
-                    { "pageName": "Cookies", "href": "/Cookies.html"}
+                    { "pageName": "Inclusive Learning", "href": "/InclusiveLearning.html" }
                 ]
             }
-
         ]
     }
 ]
