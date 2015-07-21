@@ -335,6 +335,7 @@ Delete - does not seem to be used?
     transition: width transitionTime;
 }
 
+.doc-base-start-articleBody ul,
 .doc-base-start-articleBody p {
     font-size: 1.2rem;
 }
@@ -538,24 +539,45 @@ Delete - does not seem to be used?
     padding-bottom: 0.25rem;
 }
 
-.doc-base-start-figure {
-    margin: 0 0 1.5rem 0;
-    text-align: center;
-    background-color: doc-content-figure-background;
-    padding-top: 1.8rem;
-    padding-bottom: 1.1rem;
-}
+.doc-base-start-articleBody figure {
+    background: figure-background;
 
-.doc-base-start-figureCaption {
-    padding-top: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    color: doc-content-figure-caption-color;
-    text-align: left;
-    margin-top: 1rem;
-    border-top: solid;
-    border-color: doc-content-figure-caption-border;
-    border-top-width: 0.3rem;
+    figcaption, img {
+        padding: 1rem;
+    }
+
+    figcaption {
+        border-top: 0.2rem solid figure-caption-border;
+    }
+
+    figcaption a {
+        outline: initial;
+        color: link-color;
+        background: link-background;
+        display: inline;
+    }
+
+    figcaption a:hover {
+        color: link-hover-color;
+        background: link-hover-background;
+    }
+
+    img {
+        margin: 0;
+    }
+
+    a {
+        display: block;
+    }
+
+    a:hover {
+        background: figure-background;
+        // override the default link hover style.
+    }
+
+    a:hover img {
+        outline: 0.2rem solid link-hover-background;
+    }
 }
 
 /* Infusion UIO */
