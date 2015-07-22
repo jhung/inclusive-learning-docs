@@ -50,7 +50,6 @@ hideShow-hover-background ?= link-color;
 articleBody-color ?= #000;
 articleBody-background ?= #fff;
 
-figure-caption-color ?= #000;
 figure-caption-border ?= #fff;
 figure-background ?= #efefef;
 
@@ -276,7 +275,6 @@ html body {
     font-size: 0.8rem;
 }
 
-
 @media only screen and (max-width: 40em) {
     .doc-base-start-header {
         line-height: inherit;
@@ -335,9 +333,17 @@ Delete - does not seem to be used?
     transition: width transitionTime;
 }
 
-.doc-base-start-articleBody ul,
-.doc-base-start-articleBody p {
+.doc-base-start-articleBody * {
     font-size: 1.2rem;
+}
+
+.doc-base-start-articleBody ul,
+.doc-base-start-articleBody ol {
+    margin: 0 2.5rem;
+}
+
+.doc-base-start-articleBody li {
+    margin: 0.4rem 0 ;
 }
 
 .doc-base-start-articleBody a:hover {
@@ -568,6 +574,7 @@ Delete - does not seem to be used?
 
     a {
         display: block;
+        text-align: center;
     }
 
     a:hover {
