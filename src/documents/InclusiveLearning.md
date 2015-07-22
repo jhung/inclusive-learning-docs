@@ -1,5 +1,6 @@
 ---
-title: Introduction to the Floe Model of Learning Content
+title: Inclusive Learning
+subheader: Introduction to the Floe Model of Learning Content
 layout: default
 category: Methods
 ---
@@ -85,7 +86,7 @@ That is the work that Floe focuses on. To further understand what Floe is workin
 <figure>
 <img src="/images/Fluid-studios.png" alt="Screenshot of the Fluid Studios website" />
 <figcaption>
-*Figure:* A screen capture of the Fluid Studios website. Visit the <a class="external text" rel="nofollow" href="http://studios.fluidproject.org/">Fluid Studios</a> website.
+*Figure:* A screen capture of the Fluid Studios website. Visit the <a class="external text" rel="nofollow" href="http://studios.fluidproject.org/">Fluid Studios website</a>.
 </figcaption>
 </figure>
 
