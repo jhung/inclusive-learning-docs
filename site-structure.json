@@ -31,8 +31,32 @@
                     { "pageName": "Learner Needs and Preferences", "href": "/LearnerNeedsAndPreferences.html"},
                     { "pageName": "Video Content and Learning", "href": "/VideoContentAndLearning.html"},
                     { "pageName": "Audio Content and Learning", "href": "/AudioContentAndLearning.html"},
-                    { "pageName": "Authoring of Content", "href": "/AuthoringContent.html"},
+                    { "pageName": "Authoring of Content", "href": "/AuthoringOfContent.html"},
                     { "pageName": "Cognitive Considerations", "href": "/CognitiveConsiderations.html"}
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Inclusive EPUB 3",
+        "categoryHref": "/InclusiveEPUB3.html",
+        "sections":
+        [
+            {
+                "sectionName":"",
+                "pages":
+                [
+                    { "pageName": "Semantic Markup in EPUB 3", "href": "/SemanticMarkupInEPUB3.html" },
+                    { "pageName": "WAI-ARIA", "href": "/WAI-ARIA.html"},
+                    { "pageName": "Visual Styles", "href": "/VisualStyles.html"},
+                    { "pageName": "Graphics and Multimedia", "href": "/GraphicsAndMultimedia.html"},
+                    { "pageName": "Scripts", "href": "/Scripts.html"},
+                    { "pageName": "Mathematics", "href": "/Mathematics.html"},
+                    { "pageName": "Narrations and Text-to-Speech", "href": "/NarrationsAndTextToSpeech.html"},
+                    { "pageName": "Accessibility Metadata", "href": "/AccessibilityMetadata.html"},
+                    { "pageName": "Testing and Validation", "href": "/TestingAndValidation.html"},
+                    { "pageName": "Case Study: Exemplar", "href": "/CaseStudyExemplar.html"},
+                    { "pageName": "EPUB 3 Resources", "href": "/EPUB3Resources.html"}
                 ]
             }
         ]
