@@ -38,6 +38,23 @@
         ]
     },
     {
+        "category": "Accessible Standardized Testing",
+        "categoryHref": "/AccessibleStandardizedTesting.html",
+        "sections":
+        [
+            {
+                "sectionName":"",
+                "pages":
+                [
+                    { "pageName": "General Guidelines", "href": "/GeneralGuidelines.html" },
+                    { "pageName": "Functional Considerations", "href": "/FunctionalConsiderations.html"},
+                    { "pageName": "Standardized Test Types", "href": "/StandardizedTestTypes.html"},
+                    { "pageName": "Standardized Test Tools", "href": "/StandardizedTestTools.html"}
+                ]
+            }
+        ]
+    },
+    {
         "category": "Inclusive EPUB 3",
         "categoryHref": "/InclusiveEPUB3.html",
         "sections":
